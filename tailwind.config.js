@@ -5,13 +5,18 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     textColor: (theme) => theme("colors"),
-    colors: {
+    backgroundColor: (theme) => ({
+      ...theme("colors"),
       brown: {
         100: "#45413f",
       },
-      white: colors.white,
+    }),
+    extend: {
+      maxWidth: {
+        m: "700px",
+        l: "1024px",
+      },
     },
-    extend: {},
   },
   variants: {
     extend: {},

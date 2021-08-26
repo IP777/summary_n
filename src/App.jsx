@@ -1,20 +1,25 @@
 import React from "react";
-import styled from "styled-components";
+import { SVGSource } from "./assets/image/svg/Sprites";
 import HeadLayout from "./components/HeadLayout";
-
-const StyledMain = styled.div`
-  max-width: 1024px;
-  margin: auto;
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 16px;
-  padding: 0 10px;
-`;
+import LeftBlock from "./components/LeftBlock";
+import RightBlock from "./components/RightBlock";
 
 export default function App() {
   return (
-    <HeadLayout>
-      <StyledMain>FrontEnd developer</StyledMain>
-    </HeadLayout>
+    <>
+      <SVGSource />
+      <HeadLayout>
+        <div
+          className="text-black m-auto max-w-l shadow-lg"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "320px 1fr",
+          }}
+        >
+          <LeftBlock />
+          <RightBlock />
+        </div>
+      </HeadLayout>
+    </>
   );
 }
