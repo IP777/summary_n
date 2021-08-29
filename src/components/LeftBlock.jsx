@@ -1,8 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import avatar from "../assets/image/avatar.jpg";
 import { SVG } from "../assets/image/svg/Sprites";
 
 export default function LeftBlock() {
+  const { t } = useTranslation();
   return (
     <div className="bg-brown-100 text-white p-6 pt-4">
       <div className="w-full flex flex-col">
@@ -15,13 +17,13 @@ export default function LeftBlock() {
         </div>
 
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold">Contact</h3>
+          <h3 className="text-2xl font-semibold">{t("lb.contact")}</h3>
           <p>+38 093 626-49-07</p>
           <p>ivanov.piter.86@gmail.com</p>
         </div>
 
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">Profile</h3>
+          <h3 className="text-2xl font-semibold mb-2">{t("lb.profile")}</h3>
           <div className="w-full flex items-center mb-1">
             <SVG
               id="github"
@@ -73,7 +75,7 @@ export default function LeftBlock() {
         </div>
 
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold">Technical Skills</h3>
+          <h3 className="text-2xl font-semibold">{t("lb.tSkills")}</h3>
           <ul>
             <li>HTML5</li>
             <li>CSS3</li>
@@ -86,12 +88,12 @@ export default function LeftBlock() {
           </ul>
         </div>
         <div>
-          <h3 className="text-2xl font-semibold">Soft Skills</h3>
+          <h3 className="text-2xl font-semibold">{t("lb.sSkills")}</h3>
           <ul>
-            <li>Critical thinking</li>
-            <li>Creativity</li>
+            <li>{t("lb.skills.critical")}</li>
+            <li>{t("lb.skills.creative")}</li>
             <li>Agile</li>
-            <li>Commitment to professional development</li>
+            <li>{t("lb.skills.dev")}</li>
           </ul>
         </div>
       </div>

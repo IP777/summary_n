@@ -1,12 +1,13 @@
-import React from "react";
+import React, { Suspense } from "react";
+
 import { SVGSource } from "./assets/image/svg/Sprites";
 import HeadLayout from "./components/HeadLayout";
 import LeftBlock from "./components/LeftBlock";
 import RightBlock from "./components/RightBlock";
 
-export default function App() {
+function App() {
   return (
-    <>
+    <Suspense fallback={"Loading..."}>
       <SVGSource />
       <HeadLayout>
         <div
@@ -20,6 +21,8 @@ export default function App() {
           <RightBlock />
         </div>
       </HeadLayout>
-    </>
+    </Suspense>
   );
 }
+
+export default App;

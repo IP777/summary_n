@@ -1,0 +1,27 @@
+{
+  "welcome": "Welcome to React and react-i18next",
+  "Name-surname": "Piter Ivanov",
+  "logo": "Summary En",
+  "motivation": "I would like to change my current occupation from an engineer-architect to a web application developer. Over the course of 2 years I have been actively studying web development technologies HTML, CSS, JavaScript, React, NodeJs. I have experience in team development of React applications. Also I have basic knowledge of creating Node.js server with MongoDB. I am interested in PHP and jQuery library. I would like to obtain a position in a company that offers interesting projects with growth potencial in terms of individual and professional development.",
+  "project-title": "Project examples:",
+  "team-project-title": "Team project :",
+  "personal-project-title": "Personal project:",
+  "add-education-title": "Additional Education:",
+  "education-title": "Education:",
+  "Duration": "Duration: {{count}} years",
+  "Role": "Role: {{role}}",
+  "Courses": "Courses: {{courses}}",
+  "University": "University: National Academy of Art and Architecture",
+  "University-role": "Role: Architect",
+  "lb": {
+    "contact": "Contact",
+    "profile": "Profile",
+    "tSkills": "Technical Skills",
+    "sSkills": "Soft Skills",
+    "skills": {
+      "critical": "Critical thinking",
+      "creative": "Creativity",
+      "dev": "Commitment to professional development"
+    }
+  }
+}
