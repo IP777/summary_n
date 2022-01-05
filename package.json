@@ -2,7 +2,7 @@
   "name": "Summary",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://ip777.github.io",
+  "homepage": "https://ip777.github.io/my_summary/",
   "dependencies": {
     "@craco/craco": "^6.2.0",
     "@emotion/react": "^11.7.1",
