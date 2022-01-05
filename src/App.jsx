@@ -31,6 +31,7 @@ function App() {
       <SnackbarProvider>
         <SVGSource />
         <HeadLayout>
+          <SVGSource />
           <StyledMain className="m-auto text-black shadow-lg max-w-l">
             <LeftBlock />
             <RightBlock />
