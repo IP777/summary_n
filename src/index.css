@@ -25,29 +25,29 @@ code {
 }
 
 /* Only Chrome */
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   width: 7px;
   height: 7px;
-}
-body::-webkit-scrollbar-thumb {
+} */
+/* body::-webkit-scrollbar-thumb {
   background-color: #c3c5c7;
-  background-clip: padding-box;
-  /* border: 1px solid #8ea5b5; */
-}
-body::-webkit-scrollbar-track {
+  background-clip: padding-box; */
+/* border: 1px solid #8ea5b5; */
+/* } */
+/* body::-webkit-scrollbar-track {
   background-color: #f3f6f9;
-}
-body::-webkit-scrollbar-button {
-  /* background-color: #f3f6f9; */
-}
+} */
+/* body::-webkit-scrollbar-button { */
+/* background-color: #f3f6f9; */
+/* } */
 /* Only IE */
-body {
+/* body {
   scrollbar-face-color: #c3c5c7;
   scrollbar-shadow-color: #f3f6f9;
   scrollbar-highlight-color: #f3f6f9;
-}
+} */
 /* Only FireFox */
-body {
+/* body {
   scrollbar-width: thin;
   scrollbar-color: #c3c5c7 #f3f6f9;
-}
+} */
