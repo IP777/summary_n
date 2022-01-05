@@ -5,19 +5,19 @@ export default function RightBlock() {
   const { t } = useTranslation();
   return (
     <div className="p-6 font-sans">
-      <h1 className="text-4xl font-medium mb-6 text-gray-600">
+      <h1 className="mb-6 text-4xl font-medium text-gray-600">
         {t("Name-surname")}
       </h1>
 
       <div className="mb-4">
-        <h3 className="text-xl font-medium mb-2 pb-2 border-b-2 text-gray-500">
+        <h3 className="pb-2 mb-2 text-xl font-medium text-gray-500 border-b-2">
           Junior FrontEnd developer
         </h3>
         <p>{t("motivation")}</p>
       </div>
 
       <div className="mb-4">
-        <h3 className="text-xl font-medium mb-2 pb-2 border-b-2 text-gray-500">
+        <h3 className="pb-2 mb-2 text-xl font-medium text-gray-500 border-b-2">
           {t("project-title")}
         </h3>
         <ul>
@@ -27,7 +27,7 @@ export default function RightBlock() {
       </div>
 
       <div className="mb-4">
-        <h3 className="text-xl font-medium mb-2 pb-2 border-b-2 text-gray-500">
+        <h3 className="pb-2 mb-2 text-xl font-medium text-gray-500 border-b-2">
           {t("add-education-title")}
         </h3>
         <ul>
@@ -38,7 +38,7 @@ export default function RightBlock() {
       </div>
 
       <div>
-        <h3 className="text-xl font-medium mb-2 pb-2 border-b-2 text-gray-500">
+        <h3 className="pb-2 mb-2 text-xl font-medium text-gray-500 border-b-2">
           {t("education-title")}
         </h3>
         <ul>

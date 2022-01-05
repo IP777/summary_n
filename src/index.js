@@ -3,10 +3,15 @@ import ReactDOM from "react-dom";
 import "./i18n";
 import "./index.css";
 import App from "./App";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import { SnackbarProvider } from "notistack";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <SnackbarProvider maxSnack={3}>
+      <App />
+    </SnackbarProvider>
+  </Provider>,
   document.getElementById("root")
 );

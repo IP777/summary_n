@@ -6,13 +6,13 @@ import { SVG } from "../assets/image/svg/Sprites";
 export default function LeftBlock() {
   const { t } = useTranslation();
   return (
-    <div className="bg-brown-100 text-white p-6 pt-4">
-      <div className="w-full flex flex-col">
-        <div className="w-full flex justify-center mb-1">
+    <div className="p-6 pt-4 text-white bg-brown-100">
+      <div className="flex flex-col w-full">
+        <div className="flex justify-center w-full mb-1">
           <img
             src={avatar}
             alt="avatar"
-            className="w-44 h-44 border-2 border-white rounded-full object-cover"
+            className="object-cover border-2 border-white rounded-full w-44 h-44"
           />
         </div>
 
@@ -23,8 +23,8 @@ export default function LeftBlock() {
         </div>
 
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">{t("lb.profile")}</h3>
-          <div className="w-full flex items-center mb-1">
+          <h3 className="mb-2 text-2xl font-semibold">{t("lb.profile")}</h3>
+          <div className="flex items-center w-full mb-1">
             <SVG
               id="github"
               fill="#fff"
@@ -40,7 +40,7 @@ export default function LeftBlock() {
               https://github.com/IP777
             </a>
           </div>
-          <div className="w-full flex items-center mb-1">
+          <div className="flex items-center w-full mb-1">
             <SVG
               id="linkedin"
               fill="#fff"
@@ -56,7 +56,7 @@ export default function LeftBlock() {
               www.linkedin.com/in/пётр-иванов-bbb9431ba
             </a>
           </div>
-          <div className="w-full flex items-center">
+          <div className="flex items-center w-full">
             <SVG
               id="facebook"
               fill="#fff"
