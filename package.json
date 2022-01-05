@@ -2,36 +2,7 @@
   "name": "Summary",
   "version": "1.0.0",
   "private": true,
-  "main": "index.js",
-  "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "homepage": "https://ip777.github.io/react-gh-pages",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/IP777/summary_n.git"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "homepage": "https://ip777.github.io",
   "dependencies": {
     "@craco/craco": "^6.2.0",
     "@emotion/react": "^11.7.1",
@@ -58,6 +29,30 @@
     "redux-thunk": "^2.4.1",
     "styled-components": "^5.3.3",
     "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
