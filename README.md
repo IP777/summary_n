@@ -1,1 +1,1 @@
-https://ip777.github.io/summary/
+https://ip777.github.io/summary_n/
