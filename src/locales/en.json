@@ -8,9 +8,9 @@
   "personal-project-title": "Personal project:",
   "add-education-title": "Additional Education:",
   "education-title": "Education:",
-  "Duration": "Duration: {{count}} years",
-  "Role": "Role: {{role}}",
-  "Courses": "Courses: {{courses}}",
+  "Duration": "Duration: 1.5 years",
+  "Role": "Role: Full Stack Developer",
+  "Courses": "Courses: GO-IT academy",
   "University": "University: National Academy of Art and Architecture",
   "University-role": "Role: Architect",
   "lb": {

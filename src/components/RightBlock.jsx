@@ -11,7 +11,7 @@ export default function RightBlock() {
 
       <div className="mb-4">
         <h3 className="pb-2 mb-2 text-xl font-medium text-gray-500 border-b-2">
-          Junior FrontEnd developer
+          FrontEnd developer
         </h3>
         <p>{t("motivation")}</p>
       </div>
@@ -31,9 +31,10 @@ export default function RightBlock() {
           {t("add-education-title")}
         </h3>
         <ul>
-          <li>{t("Duration", { count: 1.5 })}</li>
-          <li>{t("Courses", { courses: "GO-IT academy" })}</li>
-          <li>{t("Role", { role: "Full Stack Developer" })}</li>
+          <li>{t("Duration")}</li>
+          <li>{t("Courses")}</li>
+          {/* <li>{t("Courses", { courses: "GO-IT academy" })}</li> */}
+          <li>{t("Role")}</li>
         </ul>
       </div>
 

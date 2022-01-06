@@ -131,6 +131,16 @@ export default function DialogModal() {
           </DialogContent>
           <DialogActions style={{ padding: 20 }}>
             <Button
+              onClick={handleClose}
+              color="error"
+              autoFocus
+              variant="outlined"
+              style={{ width: 150 }}
+            >
+              {t("sendMessage.button.cancel")}
+            </Button>
+
+            <Button
               type="submit"
               color="inherit"
               variant="outlined"
@@ -147,15 +157,6 @@ export default function DialogModal() {
               {isSending
                 ? t("sendMessage.button.sending")
                 : t("sendMessage.button.send")}
-            </Button>
-            <Button
-              onClick={handleClose}
-              color="error"
-              autoFocus
-              variant="outlined"
-              style={{ width: 150 }}
-            >
-              {t("sendMessage.button.cancel")}
             </Button>
           </DialogActions>
         </form>
