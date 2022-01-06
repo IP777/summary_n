@@ -1,15 +1,19 @@
 import React, { useState } from "react";
-import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import { Edit } from "@material-ui/icons";
-import Fab from "@material-ui/core/Fab";
-import { TextField } from "@material-ui/core";
+import {
+  TextField,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  CircularProgress,
+  Fab,
+} from "@material-ui/core";
+
+import { Edit, Send, Close } from "@material-ui/icons";
 import { sendMessage } from "../redux/globalReducerAction";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import _ from "lodash";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
@@ -26,7 +30,11 @@ export default function DialogModal() {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
 
-  const [name, setName] = useState("");
+  const isSending = useSelector(
+    (state) => state.summaryReducer.message.isSending
+  );
+
+  const [name, setName] = useState("Guest");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
@@ -67,8 +75,19 @@ export default function DialogModal() {
         aria-describedby="alert-dialog-description"
       >
         <form onSubmit={handleSubmit}>
-          <DialogTitle id="alert-dialog-title" style={{ fontSize: 24 }}>
-            {t("sendMessage.title")}
+          <DialogTitle
+            id="alert-dialog-title"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              fontSize: 24,
+            }}
+          >
+            <div className="text">{t("sendMessage.title")}</div>
+            <button type="button" onClick={handleClose}>
+              <Close style={{ color: "gray" }} />
+            </button>
           </DialogTitle>
           <DialogContent>
             <DialogContentText
@@ -86,6 +105,7 @@ export default function DialogModal() {
               required
               variant="outlined"
               onChange={(e) => setName(e.target.value)}
+              value={name}
             />
             <TextField
               margin="dense"
@@ -94,6 +114,7 @@ export default function DialogModal() {
               fullWidth
               variant="outlined"
               onChange={(e) => setEmail(e.target.value)}
+              value={email}
             />
             <TextField
               margin="dense"
@@ -105,6 +126,7 @@ export default function DialogModal() {
               required
               variant="outlined"
               onChange={(e) => setMessage(e.target.value)}
+              value={message}
             />
           </DialogContent>
           <DialogActions style={{ padding: 20 }}>
@@ -112,16 +134,26 @@ export default function DialogModal() {
               type="submit"
               color="inherit"
               variant="outlined"
-              style={{ width: 120 }}
+              style={{ width: 150 }}
+              endIcon={
+                isSending ? (
+                  <CircularProgress color="inherit" size={17} />
+                ) : (
+                  <Send />
+                )
+              }
+              disabled={isSending}
             >
-              {t("sendMessage.button.send")}
+              {isSending
+                ? t("sendMessage.button.sending")
+                : t("sendMessage.button.send")}
             </Button>
             <Button
               onClick={handleClose}
-              color="secondary"
+              color="error"
               autoFocus
               variant="outlined"
-              style={{ width: 120 }}
+              style={{ width: 150 }}
             >
               {t("sendMessage.button.cancel")}
             </Button>
