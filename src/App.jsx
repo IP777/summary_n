@@ -1,7 +1,5 @@
 import React, { Suspense } from "react";
-
 import { SVGSource } from "./assets/image/svg/Sprites";
-import DialogModal from "./components/DialogModal";
 import HeadLayout from "./components/HeadLayout";
 import LeftBlock from "./components/LeftBlock";
 import RightBlock from "./components/RightBlock";
@@ -10,6 +8,7 @@ import { setSnackbar } from "./utils/snackbar";
 import styled from "styled-components";
 
 const StyledMain = styled.div`
+  height: calc(100vh - 80px) !important;
   display: grid;
   grid-template-columns: 320px 1fr;
   @media (max-width: 750px) {
@@ -25,7 +24,6 @@ const StyledMain = styled.div`
 function App() {
   setSnackbar(useSnackbar());
   useSnackbar();
-  // const mw750 = useMediaQuery("(max-width:750px)");
   return (
     <Suspense fallback={"Loading..."}>
       <SnackbarProvider>
@@ -36,7 +34,6 @@ function App() {
             <LeftBlock />
             <RightBlock />
           </StyledMain>
-          <DialogModal />
         </HeadLayout>
       </SnackbarProvider>
     </Suspense>

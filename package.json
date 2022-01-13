@@ -10,6 +10,7 @@
     "@material-ui/core": "^5.0.0-beta.4",
     "@material-ui/icons": "^4.11.2",
     "@mui/material": "^5.2.7",
+    "@mui/styles": "^5.2.3",
     "@reduxjs/toolkit": "^1.7.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",

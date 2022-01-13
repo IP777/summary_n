@@ -8,7 +8,6 @@ import {
   DialogContentText,
   DialogTitle,
   CircularProgress,
-  Fab,
 } from "@material-ui/core";
 
 import { Edit, Send, Close } from "@material-ui/icons";
@@ -19,7 +18,26 @@ import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
 const StyledDialog = styled.div`
-  opacity: 0.8;
+  .contact_button {
+    width: 150px;
+    height: 40px;
+    background-color: var(--color-orange);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    .icon {
+      color: #fff;
+    }
+    .text {
+      width: 100%;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+
   @media print {
     display: none;
   }
@@ -55,19 +73,15 @@ export default function DialogModal() {
 
   return (
     <StyledDialog>
-      <Fab
-        color="primary"
-        aria-label="edit"
-        style={{
-          position: "fixed",
-          right: 10,
-          bottom: 10,
-          backgroundColor: "#45413f",
-        }}
+      <button
+        type="button"
         onClick={handleClickOpen}
+        className="contact_button"
       >
-        <Edit className="text-white" />
-      </Fab>
+        <Edit className="icon" />
+        <div className="text">Contact me</div>
+      </button>
+
       <Dialog
         open={open}
         onClose={handleClose}

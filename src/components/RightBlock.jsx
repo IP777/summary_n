@@ -1,23 +1,35 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import styled from "styled-components";
+
+const StyledRightBlock = styled.div`
+  padding: 40px;
+  padding-top: 45px;
+  font-size: 14px;
+  .name_surname {
+    font-size: 50px;
+  }
+  .first_titles {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .summary_titles {
+  }
+`;
 
 export default function RightBlock() {
   const { t } = useTranslation();
   return (
-    <div className="p-6 font-sans">
-      <h1 className="mb-6 text-4xl font-medium text-gray-600">
-        {t("Name-surname")}
-      </h1>
+    <StyledRightBlock>
+      <h1 className="name_surname">{t("Name-surname")}</h1>
 
       <div className="mb-4">
-        <h3 className="pb-2 mb-2 text-xl font-medium text-gray-500 border-b-2">
-          FrontEnd developer
-        </h3>
-        <p>{t("motivation")}</p>
+        <h3 className="pb-2 mb-2 text-xl first_titles">FrontEnd developer</h3>
+        <p className="text">{t("motivation")}</p>
       </div>
 
       <div className="mb-4">
-        <h3 className="pb-2 mb-2 text-xl font-medium text-gray-500 border-b-2">
+        <h3 className="pb-2 mb-2 text-xl summary_titles">
           {t("project-title")}
         </h3>
         <ul>
@@ -27,7 +39,7 @@ export default function RightBlock() {
       </div>
 
       <div className="mb-4">
-        <h3 className="pb-2 mb-2 text-xl font-medium text-gray-500 border-b-2">
+        <h3 className="pb-2 mb-2 text-xl summary_titles">
           {t("add-education-title")}
         </h3>
         <ul>
@@ -39,7 +51,7 @@ export default function RightBlock() {
       </div>
 
       <div>
-        <h3 className="pb-2 mb-2 text-xl font-medium text-gray-500 border-b-2">
+        <h3 className="pb-2 mb-2 text-xl summary_titles">
           {t("education-title")}
         </h3>
         <ul>
@@ -48,6 +60,6 @@ export default function RightBlock() {
           <li>{t("University-role")}</li>
         </ul>
       </div>
-    </div>
+    </StyledRightBlock>
   );
 }
